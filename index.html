@@ -1,20 +1,172 @@
-<!DOCTYPE htm>
-<html>
-<head>
-      <title>Oi mundo</title>
-      <style type='text/css'>
-        .titulo{
-          color: orangered;
-          background: greenyellow;
-        }
-      </style>
-</head>
-<body>
-     <div class="lider">
-         <div class="soldado">
-             <h2 class="titulo">Eu te amo Franciele<br>
-             Estou escrevendo isso em um programa no computador, onde eu salvei o arquivo para abrir no navegador!</h2>
-          </div><!--soldado-->
-      </div><!--lider-->   
-</body>
-</html>                  
+.mainContainer {
+  width: 450px;
+  height: 50px;
+  background-color: #181818;
+  border-radius: 20px;
+  padding: 25px;
+  border: 2px solid var(--hColor);
+  margin: 20px;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.mainContainer .hr {
+  width: 410px;
+  height: 2px;
+  background-color: var(--hColor);
+  position: absolute;
+  -webkit-transform: translate(45px, 90px);
+          transform: translate(45px, 90px);
+}
+
+.containercheck input:checked + .mainContainer {
+  height: 470px;
+}
+
+.containercheck input:checked + .mainContainer .hcontainer {
+  opacity: 100;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.hBanner {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  border: 2px solid var(--hColor);
+  border-radius: 17px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--hColor);
+  background-size: cover;
+}
+
+.hBanner div {
+  height: 92px;
+  width: 92px;
+  border: 2px solid var(--hColor);
+  border-radius: 100%;
+  background-size: cover;
+  position: absolute;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  margin: 2px;
+  -webkit-transform: scale(150%) translateX(125px) translateY(15px);
+          transform: scale(150%) translateX(125px) translateY(15px);
+  overflow: visible;
+  white-space: nowrap;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.hBanner span, .hBanner p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 1000;
+  letter-spacing: 7px;
+  font-size: 15px;
+  white-space: nowrap;
+  position: absolute;
+  top: 35px;
+  left: 15px;
+  mix-blend-mode: overlay;
+  opacity: 75%;
+}
+
+.hBanner p {
+  top: 5px;
+  left: 15px;
+  font-size: 25px;
+  opacity: 85%;
+}
+
+.hInfo1 {
+  display: none;
+  width: 370px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 300px;
+  position: absolute;
+  top: 105px;
+  left: 45px;
+  overflow-y: scroll;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.hInfo1::-webkit-scrollbar {
+  width: 2px;
+}
+
+.hInfo1::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 10px;
+}
+
+.hInfo1::-webkit-scrollbar-thumb {
+  background: var(--hColor);
+  border-radius: 10px;
+}
+
+.hInfo1 span {
+  position: relative;
+  left: -20px;
+  font-size: 18px;
+  font-weight: 1000;
+  letter-spacing: 5px;
+  color: var(--hColor);
+  line-height: normal;
+}
+
+.hInfo1 summary {
+  color: var(--hColor);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.hInfo1 details {
+  font-size: 12px;
+  line-height: normal;
+}
+
+.hcontainer {
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.hcontainer input:checked ~ .hInfo1 {
+  display: block;
+  pointer-events: initial;
+}
+
+.hcontainer input:checked ~ .hIcon {
+  -webkit-filter: invert(61%) sepia(35%) saturate(872%) hue-rotate(144deg) brightness(96%) contrast(86%);
+          filter: invert(61%) sepia(35%) saturate(872%) hue-rotate(144deg) brightness(96%) contrast(86%);
+}
+
+.hIcon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 5px;
+  cursor: pointer;
+  pointer-events: initial;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+.mainContainer input, .containercheck input{
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
