@@ -1,172 +1,93 @@
-.mainContainer {
-  width: 450px;
-  height: 50px;
-  background-color: #181818;
-  border-radius: 20px;
-  padding: 25px;
-  border: 2px solid var(--hColor);
-  margin: 20px;
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://dl.dropbox.com/s/qm6x16r9jjlbgd4/game-icons.css');
+
+#formiga{
+	margin:0 auto;
+	width:510px;
+	text-align:justify;
+	font-size:var(--font);
+	font-family: 'Mukta', sans-serif;
+	color:#dfdfdf;
 }
 
-.mainContainer .hr {
-  width: 410px;
-  height: 2px;
-  background-color: var(--hColor);
-  position: absolute;
-  -webkit-transform: translate(45px, 90px);
-          transform: translate(45px, 90px);
+#formiga .bandeira{
+	display:block;
+	margin:0 auto;
+	width:52px;
+	height:50px;
+	opacity:0.9;
 }
 
-.containercheck input:checked + .mainContainer {
-  height: 470px;
+#formiga .titulo{
+	margin:0 auto;
+	width:540px;
+	text-align:center;
+	color:var(--cor);
+	letter-spacing:14px;
+	border-bottom: 1px outset var(--cor);
+	font-size:var(--font-titulo);
 }
 
-.containercheck input:checked + .mainContainer .hcontainer {
-  opacity: 100;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+#formiga .sub{
+	letter-spacing:5px;
+	border:none;
+	font-size:var(--font-sub);
 }
 
-.hBanner {
-  width: 500px;
-  height: 100px;
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  border: 2px solid var(--hColor);
-  border-radius: 17px;
-  overflow: hidden;
-  cursor: pointer;
-  background-color: var(--hColor);
-  background-size: cover;
 }
 
-.hBanner div {
-  height: 92px;
-  width: 92px;
-  border: 2px solid var(--hColor);
-  border-radius: 100%;
-  background-size: cover;
-  position: absolute;
-  -webkit-clip-path: circle();
-          clip-path: circle();
-  margin: 2px;
-  -webkit-transform: scale(150%) translateX(125px) translateY(15px);
-          transform: scale(150%) translateX(125px) translateY(15px);
-  overflow: visible;
-  white-space: nowrap;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+#formiga r{
+	color:var(--cor);
+	font-style:italic;
 }
 
-.hBanner span, .hBanner p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 1000;
-  letter-spacing: 7px;
-  font-size: 15px;
-  white-space: nowrap;
-  position: absolute;
-  top: 35px;
-  left: 15px;
-  mix-blend-mode: overlay;
-  opacity: 75%;
+.ico{
+	margin: 0 auto;
+	width:125px;
 }
 
-.hBanner p {
-  top: 5px;
-  left: 15px;
-  font-size: 25px;
-  opacity: 85%;
+.icon{
+	font-size:40px;
+	opacity:0.8;
+	margin:0;
 }
 
-.hInfo1 {
-  display: none;
-  width: 370px;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 300px;
-  position: absolute;
-  top: 105px;
-  left: 45px;
-  overflow-y: scroll;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: justify;
-  font-size: 14px;
-  line-height: 25px;
+#formiga dl.codebox dt {
+	color:var(--cor);
 }
 
-.hInfo1::-webkit-scrollbar {
-  width: 2px;
+.cred{
+	text-align:center;
 }
 
-.hInfo1::-webkit-scrollbar-track {
-  background: none;
-  border-radius: 10px;
+.cred a {
+	color:#ccc;
+	font-size:8px;
+	letter-spacing:6px;
 }
-
-.hInfo1::-webkit-scrollbar-thumb {
-  background: var(--hColor);
-  border-radius: 10px;
+/*Cores Formiga*/
+f{
+    color: #F16150;
 }
-
-.hInfo1 span {
-  position: relative;
-  left: -20px;
-  font-size: 18px;
-  font-weight: 1000;
-  letter-spacing: 5px;
-  color: var(--hColor);
-  line-height: normal;
+ff{
+    color: #F16150;
+	font-style:italic;
 }
-
-.hInfo1 summary {
-  color: var(--hColor);
-  font-size: 14px;
-  cursor: pointer;
+/*NPCs*/
+c{
+    color: #AAB6F8;
 }
-
-.hInfo1 details {
-  font-size: 12px;
-  line-height: normal;
+c1{
+    color: #38BEA2;
 }
-
-.hcontainer {
-  opacity: 0;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  pointer-events: none;
+c2{
+    color: #24bbed;
 }
-
-.hcontainer input:checked ~ .hInfo1 {
-  display: block;
-  pointer-events: initial;
+c3{
+    color: #329fb3;
 }
-
-.hcontainer input:checked ~ .hIcon {
-  -webkit-filter: invert(61%) sepia(35%) saturate(872%) hue-rotate(144deg) brightness(96%) contrast(86%);
-          filter: invert(61%) sepia(35%) saturate(872%) hue-rotate(144deg) brightness(96%) contrast(86%);
+c4{
+    color: #7874B0;
 }
-
-.hIcon {
-  width: 50px;
-  height: auto;
-  margin-bottom: 5px;
-  cursor: pointer;
-  pointer-events: initial;
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
-}
-
-.mainContainer input, .containercheck input{
-  display: none;
-}
-/*# sourceMappingURL=style.css.map */
+a6{
+    color:  #664fb0;
