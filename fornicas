@@ -6,7 +6,7 @@
 	width:510px;
 	text-align:justify;
 	font-size:var(--font);
-	font-family: 'Mukta', sans-serif;
+	font-family: 'EB Garamond', serif;
 	color:#dfdfdf;
 }
 
